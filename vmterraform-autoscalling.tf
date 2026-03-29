@@ -10,7 +10,7 @@ resource "aws_autoscaling_group" "vmterraform_web" {
   health_check_type   = "ELB" #this is the health check type for the autoscaling group
   launch_template {
     id      = aws_launch_template.vmterraform_ec2_instance.id
-    version = "$Latest"
+    version = "2"
   }
   tag {
     key                 = "Name"
